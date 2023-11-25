@@ -40,13 +40,11 @@ ol {
 }
 
 .content {
-  width: 1140px;
+  inline-size: auto;
   margin: auto;
   display: flex;
   gap: 30px;
   align-self: center;
-  
-  
 }
 
 .result {
@@ -87,7 +85,9 @@ ol {
 
 .search-form__fieldset-title {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -110,7 +110,9 @@ label {
 .search-form__label-text {
   display: block;
   outline: none;
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -148,7 +150,9 @@ label {
 .search-form__textfield {
   width: 225px;
   align-self: flex-start;
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -168,7 +172,7 @@ label {
   justify-content: space-between;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   display: flex;
   background-color: #fff;
@@ -203,13 +207,15 @@ label {
 .button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   width: 194px;
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   background-color: transparent;
   align-self: self-end;
@@ -243,7 +249,7 @@ label {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -265,7 +271,7 @@ label {
 
 .content__list {
   position: relative;
-  height: 298px;
+  block-size: 298px;
   width: 100%;
   overflow: scroll;
   display: flex;
@@ -323,25 +329,32 @@ ul::-webkit-scrollbar {
 }
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
   text-align: start;
+  line-height: 94%; /* 70.5px */
 }
 .content__video-card-description {
   color: #fff;
 
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px; /* 90% */
 }
 .content__video-card-thumbnail {
-  width: auto;
+  block-size: auto;
   height: 103px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .more-button {
